@@ -3,8 +3,8 @@ import { Request, Response } from "express";
 export class WelcomeRouteController {
   async handle(req: Request, res: Response) {
     try {
-      const { text } = req.body
-      if (String(text).toLowerCase() !== 'sim') throw new Error("")
+      const { data } = req.body
+      if (String(data).toLowerCase() !== 'sim') throw new Error("")
 
       return res.status(200).json({
         status: 200,
